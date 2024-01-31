@@ -1,0 +1,7 @@
+,Loresia,Spercelcia,Sania,Lentelia,Onagurumia,Alhalpal
+Loresia,x,Neutral,Ally,Ally,Neutral,Enemy
+Spercelcia,Neutral,x,Friendly,Ally,Suspicion,Ally
+Sania,Ally,Friendly,x,Neutral,Unknown,Rival
+Lentelia,Ally,Ally,Neutral,x,Suspicion,Suspicion
+Onagurumia,Neutral,Suspicion,Unknown,Suspicion,x,Suspicion
+Alhalpal,Enemy,Ally,Rival,Suspicion,Suspicion,x
