@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/badcrumble/Library/CloudStorage/OneDrive-Personal/wb.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="17629"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:maingenerators"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="generators" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="183"/><column index="2" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT 
+
+(select choice FROM generators where generator_name = 'nation_themes' ORDER BY RANDOM() LIMIT 1) as national_theme1,
+(select choice FROM generators where generator_name = 'nation_themes' ORDER BY RANDOM() LIMIT 1) as national_theme2,
+(select choice FROM generators where generator_name = 'nation_neighbor_disputes' ORDER BY RANDOM() LIMIT 1) as nation_neighbor_disputes,
+(select choice FROM generators where generator_name = 'nation_neighbor_positive' ORDER BY RANDOM() LIMIT 1) as nation_neighbor_positive,
+(select choice FROM generators where generator_name = 'nation_problems' ORDER BY RANDOM() LIMIT 1) as nation_problems,
+(select choice FROM generators where generator_name = 'nation_uplifts' ORDER BY RANDOM() LIMIT 1) as nation_uplifts,
+(select choice FROM generators where generator_name = 'govt_authority' ORDER BY RANDOM() LIMIT 1) as govt_authority,
+(select choice FROM generators where generator_name = 'govt_ruling_class' ORDER BY RANDOM() LIMIT 1) as govt_ruling_class,
+(select choice FROM generators where generator_name = 'govt_legitimacy' ORDER BY RANDOM() LIMIT 1) as govt_legitimacy,
+(select choice FROM generators where generator_name = 'govt_agents' ORDER BY RANDOM() LIMIT 1) as govt_agents,
+(select choice FROM generators where generator_name = 'govt_struggles' ORDER BY RANDOM() LIMIT 1) as govt_struggles,
+(select choice FROM generators where generator_name = 'govt_ruler_single' ORDER BY RANDOM() LIMIT 1) as govt_ruler_single,
+(select choice FROM generators where generator_name = 'govt_ruler_multiple' ORDER BY RANDOM() LIMIT 1) as govt_ruler_multiple,
+(select choice FROM generators where generator_name = 'govt_establish' ORDER BY RANDOM() LIMIT 1) as govt_establish,
+(select choice FROM generators where generator_name = 'govt_buerocracy_probs' ORDER BY RANDOM() LIMIT 1) as govt_buerocracy_probs,
+(select choice FROM generators where generator_name = 'govt_strength' ORDER BY RANDOM() LIMIT 1) as govt_strength,
+(select choice FROM generators where generator_name = 'govt_stability' ORDER BY RANDOM() LIMIT 1) as govt_stability,
+(select choice FROM generators where generator_name = 'govt_problem_officials' ORDER BY RANDOM() LIMIT 1) as govt_problem_officials,
+(select choice FROM generators where generator_name = 'govt_recent_events' ORDER BY RANDOM() LIMIT 1) as govt_recent_events,
+(select choice FROM generators where generator_name = 'govt_density' ORDER BY RANDOM() LIMIT 1) as govt_density,
+(select choice FROM generators where generator_name = 'faction_cunning' ORDER BY RANDOM() LIMIT 1) as faction_cunning,
+(select choice FROM generators where generator_name = 'faction_wealth' ORDER BY RANDOM() LIMIT 1) as faction_wealth,
+(select choice FROM generators where generator_name = 'faction_force' ORDER BY RANDOM() LIMIT 1) as faction_force,
+(select choice FROM generators where generator_name = 'faction_magic' ORDER BY RANDOM() LIMIT 1) as faction_magic
+
+</sql><sql name="SQL 2">select * from generators where choice like '%parasite%'
+</sql><sql name="SQL 3">SELECT * FROM (
+    SELECT 'national_theme1' as generator, 
+           (select choice FROM generators where generator_name = 'nation_themes' ORDER BY RANDOM() LIMIT 1) as choice
+    UNION ALL
+    SELECT 'national_theme2', 
+           (select choice FROM generators where generator_name = 'nation_themes' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'nation_neighbor_disputes', 
+           (select choice FROM generators where generator_name = 'nation_neighbor_disputes' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'nation_neighbor_positive', 
+           (select choice FROM generators where generator_name = 'nation_neighbor_positive' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'nation_problems', 
+           (select choice FROM generators where generator_name = 'nation_problems' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'nation_uplifts', 
+           (select choice FROM generators where generator_name = 'nation_uplifts' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_authority', 
+           (select choice FROM generators where generator_name = 'govt_authority' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_ruling_class', 
+           (select choice FROM generators where generator_name = 'govt_ruling_class' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_legitimacy', 
+           (select choice FROM generators where generator_name = 'govt_legitimacy' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_agents', 
+           (select choice FROM generators where generator_name = 'govt_agents' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_struggles', 
+           (select choice FROM generators where generator_name = 'govt_struggles' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_ruler_single', 
+           (select choice FROM generators where generator_name = 'govt_ruler_single' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_ruler_multiple', 
+           (select choice FROM generators where generator_name = 'govt_ruler_multiple' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_establish', 
+           (select choice FROM generators where generator_name = 'govt_establish' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_buerocracy_probs', 
+           (select choice FROM generators where generator_name = 'govt_buerocracy_probs' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_strength', 
+           (select choice FROM generators where generator_name = 'govt_strength' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_stability', 
+           (select choice FROM generators where generator_name = 'govt_stability' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_problem_officials', 
+           (select choice FROM generators where generator_name = 'govt_problem_officials' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_recent_events', 
+           (select choice FROM generators where generator_name = 'govt_recent_events' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'govt_density', 
+           (select choice FROM generators where generator_name = 'govt_density' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_cunning', 
+           (select choice FROM generators where generator_name = 'faction_cunning' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_wealth', 
+           (select choice FROM generators where generator_name = 'faction_wealth' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_force', 
+           (select choice FROM generators where generator_name = 'faction_force' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_magic', 
+           (select choice FROM generators where generator_name = 'faction_magic' ORDER BY RANDOM() LIMIT 1)
+) unpivoted_results
+ORDER BY generator;  -- Optional, to order the results by the generator name
+</sql><sql name="SQL 4">SELECT * FROM (
+    SELECT 'court_business_marketRelationship' as generator, 
+           (select choice FROM generators where generator_name = 'court_business_marketRelationship' ORDER BY RANDOM() LIMIT 1) as choice
+    UNION ALL
+    SELECT 'court_business_mjrVIP', 
+           (select choice FROM generators where generator_name = 'court_business_mjrVIP' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+	    SELECT 'mnrVIP_pwrsrc', 
+           (select choice FROM generators where generator_name = 'court_busienss_pwrsrc' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'county_business_mnrVIP', 
+           (select choice FROM generators where generator_name = 'county_business_mnrVIP' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+	    SELECT 'mjrVIP_pwrsrc', 
+           (select choice FROM generators where generator_name = 'court_busienss_pwrsrc' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'court_business_intConflict', 
+           (select choice FROM generators where generator_name = 'court_business_intConflict' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'court_business_extConflict', 
+           (select choice FROM generators where generator_name = 'court_business_extConflict' ORDER BY RANDOM() LIMIT 1)
+  UNION ALL
+    SELECT 'faction_cunning', 
+           (select choice FROM generators where generator_name = 'faction_cunning' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_wealth', 
+           (select choice FROM generators where generator_name = 'faction_wealth' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_force', 
+           (select choice FROM generators where generator_name = 'faction_force' ORDER BY RANDOM() LIMIT 1)
+    UNION ALL
+    SELECT 'faction_magic', 
+           (select choice FROM generators where generator_name = 'faction_magic' ORDER BY RANDOM() LIMIT 1)
+) unpivoted_results
+--ORDER BY generator;  -- Optional, to order the results by the generator name
+</sql><current_tab id="3"/></tab_sql></sqlb_project>
