@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('pantheonChoice');
 
     button.addEventListener('click', function() {
-        fetch('../data/pantheon_type.json')
+        fetch('https://ouchmyothereye.github.io/wb_generator/data/pantheon_type.json')
             .then(response => response.json())
             .then(data => {
                 const randomIndex = Math.floor(Math.random() * data.length);
