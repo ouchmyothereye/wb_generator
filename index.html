@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantheon Randomizer</title>
+    <title>Pantheon Generator</title>
+    <!-- Add link to your CSS file here if you have one -->
 </head>
 <body>
-    <h1>Pantheon Type Randomizer</h1>
-    <button id="randomizeButton">Randomize Pantheon Type</button>
-    <p id="pantheonChoice"></p>
-
-    <script src="https://ouchmyothereye.github.io/wb_generator/js/script.js"></script>
+    <h1>Pantheon Generator</h1>
+    
+    <!-- Pantheon Type -->
+    <button id="generatePantheonType">Generate Pantheon Type</button>
+    <p id="pantheonType"></p>
+    
+    <!-- Pantheon Size -->
+    <button id="generatePantheonSize">Generate Pantheon Size</button>
+    <p id="pantheonSize"></p>
+    
+    <!-- Number of Powers based on Pantheon Size -->
+    <button id="determinePowers">Determine Number of Powers</button>
+    <p>Great Powers: <span id="numGreat"></span></p>
+    <p>Intermediate Powers: <span id="numIntermediate"></span></p>
+    <p>Lesser Powers: <span id="numLesser"></span></p>
+    <p>Demi-Powers: <span id="numDemi"></span></p>
+    
+    <!-- Add more sections for other attributes like organization, involvement, portfolios, and alignment -->
+    
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>
