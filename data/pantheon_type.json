@@ -1,0 +1,18 @@
+[
+    {
+        "choice": "One universal pantheon",
+        "id": 1
+    },
+    {
+        "choice": "One pantheon per major culture, overlapping deities",
+        "id": 2
+    },
+    {
+        "choice": "One pantheon per major culture, in contact",
+        "id": 3
+    },
+    {
+        "choice": "One pantheon per major culture, no contact",
+        "id": 4
+    }
+]
